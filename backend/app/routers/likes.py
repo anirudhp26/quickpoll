@@ -145,6 +145,8 @@ async def delete_like(poll_id: int, db: Session = Depends(get_db), x_session_id:
         }
     }
 
+    await manager.broadcast_to_poll(poll_id, unlike_message)
+
     await manager.broadcast(unlike_message)
 
     return {"message": "Like deleted successfully"}

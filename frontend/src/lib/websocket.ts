@@ -18,14 +18,9 @@ export class WebSocketManager {
     const wsUrl = `ws://localhost:8000/ws/0`
     const ws = new WebSocket(wsUrl)
 
-    ws.onopen = () => {
-      console.log('Connected to global WebSocket')
-    }
-
     ws.onmessage = (event) => {
       try {
         const message: WSMessage = JSON.parse(event.data)
-        console.log('📨 WebSocket message received:', message, event.origin)
         
         // Handle different message types
         switch (message.type) {
@@ -50,7 +45,6 @@ export class WebSocketManager {
     }
 
     ws.onclose = () => {
-      console.log('Disconnected from global WebSocket')
       this.globalConnection = null
       // Reconnect after a delay
       setTimeout(() => this.connectGlobal(), 3000)
@@ -72,7 +66,6 @@ export class WebSocketManager {
     const ws = new WebSocket(wsUrl)
 
     ws.onopen = () => {
-      console.log(`Connected to poll ${pollId}`)
       this.reconnectAttempts.set(pollId, 0)
     }
 
@@ -86,7 +79,6 @@ export class WebSocketManager {
     }
 
     ws.onclose = () => {
-      console.log(`Disconnected from poll ${pollId}`)
       this.connections.delete(pollId)
 
       // Attempt to reconnect

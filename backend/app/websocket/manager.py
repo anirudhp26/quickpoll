@@ -1,6 +1,13 @@
 from fastapi import WebSocket
 import json
 from typing import List, Dict
+from datetime import datetime
+
+def json_serializer(obj):
+    """JSON serializer for objects not serializable by default json code"""
+    if isinstance(obj, datetime):
+        return obj.isoformat()
+    raise TypeError(f"Type {type(obj)} not serializable")
 
 class ConnectionManager:
     def __init__(self):
@@ -32,9 +39,10 @@ class ConnectionManager:
     async def broadcast_to_poll(self, poll_id: int, message: dict):
         if poll_id in self.poll_subscribers:
             disconnected = []
+            message_str = json.dumps(message, default=json_serializer)
             for websocket in self.poll_subscribers[poll_id]:
                 try:
-                    await websocket.send_text(json.dumps(message))
+                    await websocket.send_text(message_str)
                 except:
                     disconnected.append(websocket)
 
@@ -49,14 +57,15 @@ class ConnectionManager:
             else:
                 await websocket.send_text(message)
         except Exception:
-            pass  # WebSocket might be disconnected
+            print(f"Error broadcasting personal message to {websocket.client.host}: {message}")
+            pass
 
     async def broadcast(self, message: dict):
         disconnected = []
-        print(f"Active connections: {self.active_connections}")
+        message_str = json.dumps(message, default=json_serializer)
         for websocket in self.active_connections:
             try:
-                await websocket.send_text(json.dumps(message))
+                await websocket.send_text(message_str)
             except:
                 disconnected.append(websocket)
 

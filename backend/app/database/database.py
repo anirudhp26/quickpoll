@@ -6,6 +6,8 @@ from dotenv import load_dotenv
 import logging
 from sqlalchemy import event
 import time
+from alembic import command
+from alembic.config import Config
 
 load_dotenv()
 
@@ -16,12 +18,22 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 Base = declarative_base()
 
+def create_tables():
+    Base.metadata.create_all(bind=engine)
+
 def get_db():
     db = SessionLocal()
     try:
         yield db
     finally:
         db.close()
+
+# Apply migrations
+def apply_migrations():
+    alembic_config = Config("alembic.ini")
+    alembic_config.set_main_option("sqlalchemy.url", DATABASE_URL)
+    command.upgrade(alembic_config, "head")
+    logging.info("Migrations applied successfully")
 
 @event.listens_for(engine, "before_cursor_execute")
 def before_cursor_execute(conn, cursor, statement, parameters, context, executemany):

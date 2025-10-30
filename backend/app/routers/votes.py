@@ -88,6 +88,8 @@ async def create_vote(vote: VoteCreate, db: Session = Depends(get_db), x_session
         }
     }
 
+    await manager.broadcast_to_poll(vote.poll_id, vote_message)
+
     await manager.broadcast(vote_message)
 
     return {

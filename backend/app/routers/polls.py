@@ -53,7 +53,7 @@ async def create_poll(poll: PollCreate, db: Session = Depends(get_db), x_session
     poll_data = {
         "id": db_poll.id,
         "user_id": db_poll.user_id,
-        "username": db_poll.owner.username,
+        "username": user.username,
         "title": db_poll.title,
         "description": db_poll.description,
         "total_votes": db_poll.total_votes,
@@ -64,6 +64,8 @@ async def create_poll(poll: PollCreate, db: Session = Depends(get_db), x_session
         "expires_in": db_poll.expires_in,
         "is_active": db_poll.is_active
     }
+
+    await manager.broadcast_to_poll(db_poll.id, poll_data)
     
     await manager.broadcast({
         "type": "poll_created",

@@ -94,7 +94,8 @@ class DemoDataGenerator:
                 # Eager load options to avoid N+1 queries
                 from sqlalchemy.orm import joinedload
                 polls = db.query(Poll).options(
-                    joinedload(Poll.options)
+                    joinedload(Poll.options),
+                    joinedload(Poll.owner)
                 ).filter(
                     Poll.is_active == True,
                     Poll.booster == True
@@ -132,8 +133,8 @@ class DemoDataGenerator:
                     Poll.expires_in != None
                 ).all()
                 
-                from datetime import datetime, timedelta
-                now = datetime.now()
+                from datetime import datetime, timedelta, timezone
+                now = datetime.now(timezone.utc)
                 
                 # Identify expired polls
                 expired_poll_ids = []
@@ -155,6 +156,11 @@ class DemoDataGenerator:
                     
                     # Broadcast deletions
                     for poll_id in expired_poll_ids:
+                        await manager.broadcast_to_poll(poll_id, {
+                            "type": "poll_deleted",
+                            "poll_id": poll_id,
+                            "data": {}
+                        })
                         await manager.broadcast({
                             "type": "poll_deleted",
                             "poll_id": poll_id,
@@ -291,6 +297,8 @@ class DemoDataGenerator:
                     "is_active": poll.is_active
                 }
             }
+
+            await manager.broadcast_to_poll(poll.id, update_message)
             
             await manager.broadcast(update_message)
             

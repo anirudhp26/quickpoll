@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Poll } from '@/types/poll'
 import { apiClient } from '@/lib/api'
+import { wsManager } from '@/lib/websocket'
 import PollCard from './PollCard'
 import { FiAlertTriangle, FiLoader, FiPlusCircle } from 'react-icons/fi'
 import { WSMessage } from '@/types/ws'
@@ -20,6 +21,10 @@ export default function PollList({ onOpenPoll, onNewPoll }: PollListProps) {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
   const [status, setStatus] = useState<PollStatus>("active")
+
+  useEffect(() => {
+    wsManager.connectGlobal();
+  }, [])
 
   const fetchPolls = async (currentStatus: PollStatus) => {
     setLoading(true)
@@ -43,9 +48,6 @@ export default function PollList({ onOpenPoll, onNewPoll }: PollListProps) {
         
         setPolls(prev => {
             const existingPollIndex = prev.findIndex(p => p.id === updatedPoll.id)
-            console.log('existingPollIndex', existingPollIndex)
-            console.log('updatedPoll', updatedPoll)
-            console.log('prev', prev)
             if (existingPollIndex > -1) {
                 // Update existing poll
                 const newPolls = [...prev]

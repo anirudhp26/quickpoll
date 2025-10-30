@@ -5,7 +5,7 @@ import json
 from contextlib import asynccontextmanager
 import asyncio
 
-from app.database.database import engine, Base
+from app.database.database import engine, Base, create_tables
 from app.routers import polls_router as polls, users_router as users, votes_router as votes, likes_router as likes
 from app.websocket.manager import manager
 from app.models.models import Poll
@@ -15,7 +15,7 @@ from app.services.demo_data_generator import demo_data_generator
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # Startup
-    Base.metadata.create_all(bind=engine)
+    create_tables()
     
     # Start demo data generator in background
     print("🚀 Starting demo data generator...")
@@ -94,7 +94,6 @@ async def websocket_endpoint(websocket: WebSocket, poll_id: int):
             finally:
                 db.close()
         else:
-            # For poll_id 0, just send a welcome message
             await manager.send_personal_message(json.dumps({
                 "type": "connected",
                 "poll_id": 0,
