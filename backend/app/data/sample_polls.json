@@ -1,0 +1,487 @@
+[
+  {
+    "title": "What's your favorite programming language?",
+    "description": "Which language do you use most for development?",
+    "options": ["Python", "JavaScript", "Java", "Go", "Rust"]
+  },
+  {
+    "title": "Best pizza topping",
+    "description": "What's your go-to pizza topping?",
+    "options": ["Pepperoni", "Mushrooms", "Cheese", "Veggies", "Pineapple"]
+  },
+  {
+    "title": "Coffee or Tea?",
+    "description": "Which beverage keeps you going?",
+    "options": ["Coffee", "Tea", "Both", "Neither"]
+  },
+  {
+    "title": "Favorite OS for development",
+    "description": "What operating system do you prefer?",
+    "options": ["Linux", "macOS", "Windows", "FreeBSD"]
+  },
+  {
+    "title": "Cloud provider preference",
+    "description": "Where do you deploy your apps?",
+    "options": ["AWS", "Azure", "Google Cloud", "Digital Ocean", "Heroku"]
+  },
+  {
+    "title": "Best time to code",
+    "description": "When are you most productive?",
+    "options": ["Early morning", "Late night", "Afternoon", "Anytime"]
+  },
+  {
+    "title": "Favorite database",
+    "description": "Which database do you prefer?",
+    "options": ["PostgreSQL", "MySQL", "MongoDB", "Redis", "SQLite"]
+  },
+  {
+    "title": "Team size preference",
+    "description": "How do you like to work?",
+    "options": ["Solo", "Small team (2-5)", "Medium team (6-15)", "Large team (16+)"]
+  },
+  {
+    "title": "Remote work opinion",
+    "description": "Where do you prefer to work?",
+    "options": ["Fully remote", "Hybrid", "Fully office", "It depends"]
+  },
+  {
+    "title": "Code editor choice",
+    "description": "What's your main editor?",
+    "options": ["VS Code", "Vim", "Emacs", "Sublime", "IntelliJ", "Other"]
+  },
+  {
+    "title": "Best superpower",
+    "description": "If you could have one superpower, what would it be?",
+    "options": ["Flight", "Invisibility", "Time travel", "Super strength", "Mind reading"]
+  },
+  {
+    "title": "Favorite season",
+    "description": "Which season is the best?",
+    "options": ["Spring", "Summer", "Fall", "Winter"]
+  },
+  {
+    "title": "Pet preference",
+    "description": "What kind of pet would you want?",
+    "options": ["Dog", "Cat", "Bird", "Fish", "None"]
+  },
+  {
+    "title": "Music genre preference",
+    "description": "What music do you enjoy?",
+    "options": ["Rock", "Pop", "Jazz", "Classical", "Electronic", "Hip Hop"]
+  },
+  {
+    "title": "Best dessert",
+    "description": "What's your sweet tooth craving?",
+    "options": ["Ice cream", "Chocolate cake", "Pie", "Cookies", "Donuts"]
+  },
+  {
+    "title": "Favorite social media",
+    "description": "Which platform do you use most?",
+    "options": ["Twitter", "LinkedIn", "Instagram", "Reddit", "Facebook"]
+  },
+  {
+    "title": "Programming paradigm",
+    "description": "Which approach do you prefer?",
+    "options": ["OOP", "Functional", "Procedural", "Mixed"]
+  },
+  {
+    "title": "Testing strategy",
+    "description": "How do you test your code?",
+    "options": ["TDD", "BDD", "Manual testing", "No testing", "All approaches"]
+  },
+  {
+    "title": "Best weekend activity",
+    "description": "What do you do to relax?",
+    "options": ["Hiking", "Gaming", "Reading", "Movies", "Sports"]
+  },
+  {
+    "title": "Container technology",
+    "description": "Which container platform do you use?",
+    "options": ["Docker", "Kubernetes", "Podman", "None"]
+  },
+  {
+    "title": "Mobile device preference",
+    "description": "Which mobile OS do you prefer?",
+    "options": ["iOS", "Android", "Don't use mobile"]
+  },
+  {
+    "title": "Documentation importance",
+    "description": "How important is documentation?",
+    "options": ["Critical", "Very important", "Nice to have", "Not needed"]
+  },
+  {
+    "title": "Code review frequency",
+    "description": "How often do you do code reviews?",
+    "options": ["Always", "Most times", "Sometimes", "Rarely"]
+  },
+  {
+    "title": "Best way to learn programming",
+    "description": "How did you learn?",
+    "options": ["School", "Online courses", "Self-taught", "Bootcamp", "On the job"]
+  },
+  {
+    "title": "Favorite holiday",
+    "description": "Which holiday do you look forward to?",
+    "options": ["Christmas", "Thanksgiving", "Halloween", "New Year", "Birthday"]
+  },
+  {
+    "title": "Sports preference",
+    "description": "Which sport do you follow?",
+    "options": ["Football", "Basketball", "Soccer", "Baseball", "Tennis", "None"]
+  },
+  {
+    "title": "Learning new tech approach",
+    "description": "How do you approach new technologies?",
+    "options": ["Read docs", "Watch tutorials", "Build a project", "Ask community"]
+  },
+  {
+    "title": "Code commenting style",
+    "description": "How do you comment code?",
+    "options": ["Heavy comments", "Light comments", "Self-documenting", "No comments"]
+  },
+  {
+    "title": "Best vacation destination",
+    "description": "Where would you love to travel?",
+    "options": ["Beach", "Mountains", "City", "Countryside", "Desert"]
+  },
+  {
+    "title": "Favorite movie genre",
+    "description": "What movies do you enjoy?",
+    "options": ["Action", "Comedy", "Drama", "Sci-Fi", "Horror", "Documentary"]
+  },
+  {
+    "title": "Git workflow",
+    "description": "How do you manage Git branches?",
+    "options": ["Git Flow", "GitHub Flow", "Trunk-based", "Simple main branch"]
+  },
+  {
+    "title": "IDE vs Editor",
+    "description": "What's your development environment?",
+    "options": ["Full IDE", "Lightweight editor", "Terminal-based"]
+  },
+  {
+    "title": "Best way to debug",
+    "description": "How do you find bugs?",
+    "options": ["Print statements", "Debugger", "Logging", "Unit tests"]
+  },
+  {
+    "title": "API design preference",
+    "description": "What API style do you prefer?",
+    "options": ["REST", "GraphQL", "gRPC", "WebSocket"]
+  },
+  {
+    "title": "Favorite snack while coding",
+    "description": "What keeps you fueled?",
+    "options": ["Chips", "Chocolate", "Fruit", "Nuts", "Nothing"]
+  },
+  {
+    "title": "Meeting frequency",
+    "description": "How often do you want meetings?",
+    "options": ["Multiple daily", "Once a day", "Few times a week", "Minimal"]
+  },
+  {
+    "title": "Best programming book",
+    "description": "Which book helped you most?",
+    "options": ["Clean Code", "Design Patterns", "Structure and Interpretation", "None"]
+  },
+  {
+    "title": "Favorite TV show genre",
+    "description": "What shows do you binge?",
+    "options": ["Sci-Fi", "Comedy", "Drama", "Crime", "Documentary"]
+  },
+  {
+    "title": "Best approach to refactoring",
+    "description": "How do you improve code?",
+    "options": ["Big bang", "Incremental", "When touching code", "Never"]
+  },
+  {
+    "title": "Monitoring approach",
+    "description": "How do you monitor production?",
+    "options": ["APM tools", "Logging", "Metrics dashboards", "Manual checks"]
+  },
+  {
+    "title": "Favorite breakfast",
+    "description": "What starts your day?",
+    "options": ["Cereal", "Eggs", "Toast", "Smoothie", "Coffee only"]
+  },
+  {
+    "title": "Code deployment frequency",
+    "description": "How often do you deploy?",
+    "options": ["Multiple times a day", "Daily", "Weekly", "Monthly"]
+  },
+  {
+    "title": "Best way to learn algorithms",
+    "description": "How do you study DS&A?",
+    "options": ["LeetCode", "Books", "Video courses", "Practice projects"]
+  },
+  {
+    "title": "Favorite gaming platform",
+    "description": "Where do you game?",
+    "options": ["PC", "PlayStation", "Xbox", "Nintendo", "Mobile", "Don't game"]
+  },
+  {
+    "title": "Code versioning",
+    "description": "Version strategy preference?",
+    "options": ["Semantic versioning", "Date-based", "Simple increment", "No versioning"]
+  },
+  {
+    "title": "Best networking event",
+    "description": "Where do you network?",
+    "options": ["Conferences", "Meetups", "Online forums", "LinkedIn", "Never"]
+  },
+  {
+    "title": "Favorite subreddit topic",
+    "description": "What Reddit content do you read?",
+    "options": ["r/programming", "r/webdev", "r/sysadmin", "r/funny", "Don't use Reddit"]
+  },
+  {
+    "title": "Code sharing preference",
+    "description": "How do you share code snippets?",
+    "options": ["GitHub Gist", "Pastebin", "Email", "Slack", "Never share"]
+  },
+  {
+    "title": "Best productivity tool",
+    "description": "What helps you stay organized?",
+    "options": ["Notion", "Jira", "Trello", "Evernote", "Pen and paper"]
+  },
+  {
+    "title": "Favorite cuisine",
+    "description": "What food do you crave?",
+    "options": ["Italian", "Mexican", "Asian", "American", "Mediterranean"]
+  },
+  {
+    "title": "Best conference talk format",
+    "description": "What conference talks do you enjoy?",
+    "options": ["Technical deep dives", "Case studies", "Hands-on workshops", "Lightning talks"]
+  },
+  {
+    "title": "Code style preference",
+    "description": "How do you format code?",
+    "options": ["Prettier/Black", "Manual formatting", "Don't care", "Project convention"]
+  },
+  {
+    "title": "Favorite board game",
+    "description": "What games do you play offline?",
+    "options": ["Chess", "Monopoly", "Settlers of Catan", "Ticket to Ride", "Don't play"]
+  },
+  {
+    "title": "Best approach to backups",
+    "description": "How do you backup data?",
+    "options": ["Automated daily", "Manual weekly", "Cloud sync", "Never backup"]
+  },
+  {
+    "title": "Favorite podcast topic",
+    "description": "What podcasts do you listen to?",
+    "options": ["Tech news", "Programming", "Business", "Entertainment", "Don't listen"]
+  },
+  {
+    "title": "Code documentation format",
+    "description": "How do you document APIs?",
+    "options": ["OpenAPI/Swagger", "Markdown", "HTML", "Inline only", "Don't document"]
+  },
+  {
+    "title": "Best energy drink",
+    "description": "What keeps you energized?",
+    "options": ["Red Bull", "Monster", "Coffee", "Tea", "Water", "Don't use energy drinks"]
+  },
+  {
+    "title": "Favorite programming challenge",
+    "description": "What coding challenges do you enjoy?",
+    "options": ["CTFs", "LeetCode", "Project Euler", "Advent of Code", "None"]
+  },
+  {
+    "title": "Code review tool",
+    "description": "What do you use for code reviews?",
+    "options": ["GitHub PRs", "GitLab MRs", "Phabricator", "Email patches", "In-person"]
+  },
+  {
+    "title": "Best approach to legacy code",
+    "description": "How do you handle legacy systems?",
+    "options": ["Full rewrite", "Incremental refactor", "Leave as-is", "Replace gradually"]
+  },
+  {
+    "title": "Favorite social coding site",
+    "description": "Where do you showcase code?",
+    "options": ["GitHub", "GitLab", "Bitbucket", "Dev.to", "Personal blog"]
+  },
+  {
+    "title": "Meeting format preference",
+    "description": "What meetings do you like?",
+    "options": ["Video calls", "In-person", "Async async/updates", "Minimal meetings"]
+  },
+  {
+    "title": "Best way to stay updated",
+    "description": "How do you learn about new tech?",
+    "options": ["Hacker News", "Twitter", "Newsletters", "Blogs", "Word of mouth"]
+  },
+  {
+    "title": "Favorite design pattern",
+    "description": "Which pattern do you use most?",
+    "options": ["MVC", "MVVM", "Observer", "Singleton", "Factory", "Strategy"]
+  },
+  {
+    "title": "Best troubleshooting approach",
+    "description": "How do you solve problems?",
+    "options": ["Google it", "Read docs", "Ask Stack Overflow", "Debug logs", "Ask coworkers"]
+  },
+  {
+    "title": "Favorite tech YouTuber",
+    "description": "Who do you watch for tech content?",
+    "options": ["Linus Tech Tips", "Dev Ed", "Traversy Media", "Fireship", "Don't watch YouTube"]
+  },
+  {
+    "title": "Code organization preference",
+    "description": "How do you structure code?",
+    "options": ["Feature-based", "Layer-based", "Module-based", "Flat structure"]
+  },
+  {
+    "title": "Best interview format",
+    "description": "What interviews do you prefer?",
+    "options": ["Technical coding", "System design", "Behavioral", "Take-home project"]
+  },
+  {
+    "title": "Favorite cloud service",
+    "description": "Which AWS/GCP/Azure service do you use most?",
+    "options": ["Compute", "Storage", "Database", "Networking", "AI/ML"]
+  },
+  {
+    "title": "Best way to handle secrets",
+    "description": "How do you manage credentials?",
+    "options": ["Environment variables", "Secret managers", "Config files", "Hardcode (bad)"]
+  },
+  {
+    "title": "Favorite coding music",
+    "description": "What music helps you focus?",
+    "options": ["Lo-fi hip hop", "Electronic", "Classical", "Rock", "No music", "Silence"]
+  },
+  {
+    "title": "Best notification strategy",
+    "description": "How do you handle notifications?",
+    "options": ["All enabled", "Selective", "Mostly off", "Do not disturb"]
+  },
+  {
+    "title": "Favorite tech stack",
+    "description": "What stack do you work with?",
+    "options": ["MERN", "MEAN", "LAMP", "JAMstack", "Serverless"]
+  },
+  {
+    "title": "Best approach to authentication",
+    "description": "How do you handle auth?",
+    "options": ["OAuth", "JWT", "Session-based", "Basic auth", "Magic links"]
+  },
+  {
+    "title": "Favorite terminal emulator",
+    "description": "What terminal do you use?",
+    "options": ["iTerm2", "WSL Terminal", "Alacritty", "Default terminal", "Tmux"]
+  },
+  {
+    "title": "Best way to collaborate",
+    "description": "How do you work with teams?",
+    "options": ["Pair programming", "Pull requests", "Mob programming", "Solo"]
+  },
+  {
+    "title": "Favorite code quality tool",
+    "description": "What tools do you use for quality?",
+    "options": ["ESLint/Pylint", "SonarQube", "CodeClimate", "None", "All of them"]
+  },
+  {
+    "title": "Best deployment strategy",
+    "description": "How do you deploy?",
+    "options": ["Blue-green", "Canary", "Rolling", "Big bang", "Feature flags"]
+  },
+  {
+    "title": "Favorite data structure",
+    "description": "Which DS do you use most?",
+    "options": ["Array", "Hash Map", "Tree", "Graph", "Stack", "Queue"]
+  },
+  {
+    "title": "Best approach to caching",
+    "description": "How do you cache?",
+    "options": ["Redis", "In-memory", "CDN", "Database caching", "No caching"]
+  },
+  {
+    "title": "Favorite load balancer",
+    "description": "How do you distribute traffic?",
+    "options": ["Nginx", "HAProxy", "AWS ELB", "Cloudflare", "No load balancer"]
+  },
+  {
+    "title": "Best way to test APIs",
+    "description": "How do you test endpoints?",
+    "options": ["Postman", "curl", "REST Client", "Automated tests", "Manual browser"]
+  },
+  {
+    "title": "Favorite shell",
+    "description": "What shell do you use?",
+    "options": ["Bash", "Zsh", "Fish", "PowerShell", "Default shell"]
+  },
+  {
+    "title": "Best approach to logging",
+    "description": "How do you log?",
+    "options": ["Structured logs", "JSON logs", "Plain text", "Minimal logging"]
+  },
+  {
+    "title": "Favorite microservice pattern",
+    "description": "How do you design microservices?",
+    "options": ["API Gateway", "Service Mesh", "Saga pattern", "Event-driven", "Monolith"]
+  },
+  {
+    "title": "Best way to handle errors",
+    "description": "How do you manage errors?",
+    "options": ["Try-catch", "Result types", "Go-style errors", "Exceptions everywhere"]
+  },
+  {
+    "title": "Favorite CI/CD platform",
+    "description": "Where do you run CI/CD?",
+    "options": ["GitHub Actions", "GitLab CI", "Jenkins", "CircleCI", "No CI/CD"]
+  },
+  {
+    "title": "Best approach to observability",
+    "description": "How do you monitor apps?",
+    "options": ["Metrics", "Tracing", "Logging", "All three", "None"]
+  },
+  {
+    "title": "Favorite payment processor",
+    "description": "How would you accept payments?",
+    "options": ["Stripe", "PayPal", "Square", "Crypto", "Don't need payments"]
+  },
+  {
+    "title": "Best way to scale",
+    "description": "How do you handle growth?",
+    "options": ["Horizontal", "Vertical", "Both", "Don't scale"]
+  },
+  {
+    "title": "Favorite security practice",
+    "description": "What security measures do you implement?",
+    "options": ["HTTPS only", "Input validation", "Rate limiting", "All security measures"]
+  },
+  {
+    "title": "Best approach to state management",
+    "description": "How do you manage state?",
+    "options": ["Redux", "Context API", "MobX", "Zustand", "Local component state"]
+  },
+  {
+    "title": "Favorite mobile framework",
+    "description": "How do you build mobile apps?",
+    "options": ["React Native", "Flutter", "Ionic", "Native", "Don't do mobile"]
+  },
+  {
+    "title": "Best way to handle async",
+    "description": "How do you handle async code?",
+    "options": ["Promises", "async/await", "Callbacks", "RxJS", "Threads"]
+  },
+  {
+    "title": "Favorite blockchain network",
+    "description": "Would you build on blockchain?",
+    "options": ["Ethereum", "Polygon", "Solana", "Bitcoin", "No blockchain"]
+  },
+  {
+    "title": "Best approach to file storage",
+    "description": "Where do you store files?",
+    "options": ["AWS S3", "Local disk", "Database", "IPFS", "No file storage needed"]
+  },
+  {
+    "title": "Favorite AI tool",
+    "description": "What AI tools do you use?",
+    "options": ["ChatGPT", "GitHub Copilot", "Cursor", "Custom models", "No AI"]
+  }
+]
