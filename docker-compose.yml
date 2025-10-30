@@ -17,8 +17,8 @@ services:
     ports:
       - "8000:8000"
     environment:
-      DATABASE_URL: postgresql://postgres:password@db/quickpoll
-      FRONTEND_URL: http://localhost:3000
+      DATABASE_URL: ${DATABASE_URL:-postgresql://postgres:password@db/quickpoll}
+      FRONTEND_URL: ${FRONTEND_URL:-http://localhost:3000}
     depends_on:
       - db
     volumes:
@@ -30,7 +30,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      NEXT_PUBLIC_API_URL: http://localhost:8000/api
+      NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8000/api}
     depends_on:
       - backend
     volumes:
